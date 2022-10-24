@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafkaconsumer-deployment
+spec:
+  selector:
+    matchLabels:
+      app: kafkaconsumer-pod
+  template:
+    metadata:
+      labels:
+        app: kafkaconsumer-pod
+    spec:
+      containers:
+        - name: kafkaconsumer-container
+          image: ghcr.io/arkapravasinha/kafkaconsumer:v0.0.1
+          resources:
+            limits:
+              memory: 128Mi
+              cpu: 500m

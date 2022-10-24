@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Kafka.Producer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

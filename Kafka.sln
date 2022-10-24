@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Producer", "Kafka.Producer\Kafka.Producer.csproj", "{B4EFD3B1-CB5B-4869-92C3-2711417675EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Consumer", "Kafka.Consumer\Kafka.Consumer.csproj", "{BE598DCC-5735-42D0-BDF8-48831D84F06F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CI", "CI", "{21CA78D0-C3B3-475B-9D62-6EC4F23CA734}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\docker-publish.yml = .github\workflows\docker-publish.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{811B1486-C9E1-42C6-9668-7D0D9DB1236A}"
+	ProjectSection(SolutionItems) = preProject
+		deployment\consumer.yaml = deployment\consumer.yaml
+		deployment\producer.yaml = deployment\producer.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4EFD3B1-CB5B-4869-92C3-2711417675EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4EFD3B1-CB5B-4869-92C3-2711417675EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4EFD3B1-CB5B-4869-92C3-2711417675EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4EFD3B1-CB5B-4869-92C3-2711417675EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE598DCC-5735-42D0-BDF8-48831D84F06F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE598DCC-5735-42D0-BDF8-48831D84F06F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE598DCC-5735-42D0-BDF8-48831D84F06F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE598DCC-5735-42D0-BDF8-48831D84F06F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DA28817-8575-46DA-A0CB-0087B5C83390}
+	EndGlobalSection
+EndGlobal
