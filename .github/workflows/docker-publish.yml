@@ -74,7 +74,7 @@ jobs:
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
       - name: Build and push Docker image 1
-        id: build-and-push
+        id: build-and-push-1
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
@@ -86,7 +86,7 @@ jobs:
           file: ./kafka.Producer/Dockerfile   
 
       - name: Build and push Docker image 2
-        id: build-and-push
+        id: build-and-push-2
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
           context: .
