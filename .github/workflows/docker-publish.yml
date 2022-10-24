@@ -83,7 +83,7 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/${{env.IMAGE1}}:latest
             ghcr.io/${{ github.repository_owner }}/${{env.IMAGE1}}:v${{ steps.version-git.outputs.semVer }}
           labels: ${{ steps.meta.outputs.labels }}
-          file: ./kafka.Producer/Dockerfile   
+          file: ./Kafka.Producer/Dockerfile   
 
       - name: Build and push Docker image 2
         id: build-and-push-2
@@ -95,7 +95,7 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/${{env.IMAGE2}}:latest
             ghcr.io/${{ github.repository_owner }}/${{env.IMAGE2}}:v${{ steps.version-git.outputs.semVer }}
           labels: ${{ steps.meta.outputs.labels }}
-          file: ./kafka.Consumer/Dockerfile   
+          file: ./Kafka.Consumer/Dockerfile   
 
       - name: Update Container in producer.yaml
         uses: fjogeleit/yaml-update-action@main
