@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: kafkaconsumer-container
-          image: ghcr.io/arkapravasinha/kafkaconsumer:v0.0.1
+          image: ghcr.io/arkapravasinha/kafkaconsumer:v0.1.0
           resources:
             limits:
               memory: 128Mi
