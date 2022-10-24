@@ -101,7 +101,7 @@ jobs:
         uses: fjogeleit/yaml-update-action@main
         if: github.event_name != 'pull_request'
         with:
-          valueFile: 'deployment/producer.yml'
+          valueFile: 'deployment/producer.yaml'
           propertyPath: 'spec.template.spec.containers[0].image'
           value: ghcr.io/${{ github.repository_owner }}/${{env.IMAGE1}}:v${{ steps.version-git.outputs.semVer }}
           commitChange: true
@@ -113,7 +113,7 @@ jobs:
         uses: fjogeleit/yaml-update-action@main
         if: github.event_name != 'pull_request'
         with:
-          valueFile: 'deployment/consumer.yml'
+          valueFile: 'deployment/consumer.yaml'
           propertyPath: 'spec.template.spec.containers[0].image'
           value: ghcr.io/${{ github.repository_owner }}/${{env.IMAGE2}}:v${{ steps.version-git.outputs.semVer }}
           commitChange: true
