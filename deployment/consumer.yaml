@@ -16,5 +16,5 @@ spec:
           image: ghcr.io/arkapravasinha/kafkaconsumer:v0.0.1
           resources:
             limits:
-              memory: 128Mi
+              memory: 50Mi
               cpu: 500m
