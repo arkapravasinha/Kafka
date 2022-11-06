@@ -21,7 +21,7 @@ try
     {
         while (!cts.IsCancellationRequested)
         {
-            p.Produce("test101", new Message<Null, string> { Value = Guid.NewGuid().ToString() }, handler);
+            p.Produce("test_application_topic", new Message<Null, string> { Value = Guid.NewGuid().ToString() }, handler);
         }
 
         // wait for up to 10 seconds for any inflight messages to be delivered.

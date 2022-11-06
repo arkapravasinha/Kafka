@@ -69,7 +69,7 @@ using (var consumer = new ConsumerBuilder<Ignore, string>(config)
     })
     .Build())
 {
-    consumer.Subscribe("test101");
+    consumer.Subscribe("test_application_topic");
 
     try
     {
